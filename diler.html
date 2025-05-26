@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        /* body {
+            background-color: black;
+        } */
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rgbAnimation 20s infinite alternate;
+            background: linear-gradient(270deg, red, yellow, green, cyan, blue, magenta);
+            background-size: 400% 400%;
+        }
+        @keyframes rgbAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 0% 100%;
+            }
+            75% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .pr {
+            border: 15px solid;
+            height: 460px;
+            width: 308px;
+            margin: 150px auto;
+            border-radius: 2px;
+            border-style: groove;
+            border-color: rgb(0, 0, 0);
+            padding: 3px;
+            background: linear-gradient(purple, pink, skyblue);
+        }
+
+        /* .pr:hover{
+            box-shadow: 0px 0px 100px 5px red;
+
+        } */
+        input {
+            height: 50px;
+            width: 265px;
+            font-size: 45px;
+            border: none;
+            border-left: 5px solid;
+            border-bottom: 2px solid;
+            outline: none;
+            background: transparent;
+            padding-left: 30px;
+            color: white;
+            -webkit-text-stroke: 5px solid black;
+        }
+
+        .no {
+            height: 320px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10px;
+            background: transparent;
+        }
+
+        .num:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .num {
+            background: transparent;
+            height: 70px;
+            width: 70px;
+            border: 1px solid;
+            margin-top: 8px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .num:hover {
+            box-shadow: 0px 0px 22px 4px rgb(249, 249, 142);
+        }
+
+        #call {
+            border: 2px solid;
+            height: 50px;
+            width: 146px;
+            margin-top: 15px;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 235, 0);
+            color: white;
+            font-size: 50px;
+        }
+
+        #call:hover {
+            box-shadow: 0px 0px 22px 10px green;
+        }
+
+        #rej {
+            border: 2px solid;
+            height: 50px;
+            width: 146px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+            background-color: red;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        #rej:hover {
+            box-shadow: 0px 0px 22px 10px red;
+        }
+
+        #fot {
+            display: flex;
+        }
+    </style>
+
+</head>
+
+    <body>
+        <div class="pr">
+            <input type="text" id="inputField">
+            <div class="no">
+                <button id="n1" class="num">1</button>
+                <button id="n2" class="num">4</button>
+                <button id="n3" class="num">7</button>
+                <button id="n4" class="num" style="font-size: 55px;">*</button>
+                <button id="n5" class="num">2</button>
+                <button id="n6" class="num">5</button>
+                <button id="n7" class="num">8</button>
+                <button id="n8" class="num">0</button>
+                <button id="n9" class="num">3</button>
+                <button id="n10" class="num">6</button>
+                <button id="n11" class="num">9</button>
+                <button id="n12" class="num">#</button>
+                <div></div>
+            </div>
+
+
+
+            <div id="fot">
+                <button id="call"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                <button id="rej">REJECT</button>
+            </div>
+        </div>
+
+        <script>
+            const inputField = document.getElementById('inputField');
+            function appendToInput(value) {
+                inputField.value += value;
+            }
+            document.getElementById('n1').onclick = function () { appendToInput('1'); };
+            document.getElementById('n2').onclick = function () { appendToInput('4'); };
+            document.getElementById('n3').onclick = function () { appendToInput('7'); };
+            document.getElementById('n4').onclick = function () { appendToInput('*'); };
+            document.getElementById('n5').onclick = function () { appendToInput('2'); };
+            document.getElementById('n6').onclick = function () { appendToInput('5'); };
+            document.getElementById('n7').onclick = function () { appendToInput('8'); };
+            document.getElementById('n8').onclick = function () { appendToInput('0'); };
+            document.getElementById('n9').onclick = function () { appendToInput('3'); };
+            document.getElementById('n10').onclick = function () { appendToInput('6'); };
+            document.getElementById('n11').onclick = function () { appendToInput('9'); };
+            document.getElementById('n12').onclick = function () { appendToInput('#'); };
+        </script>
+    </body>
+
+</html>
